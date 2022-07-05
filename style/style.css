@@ -1,0 +1,141 @@
+body {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    max-width: 1200px;
+    /* esse "max-width" serve para quando possuir mais elementos na tela eles não se espalharem caso o monitor for grande.*/ 
+    margin: 0 auto;
+    /* "margin" utilizado para posicionar o site no meio da página. (Define as margens esquerda e direita do elemento e as margens auto superior e inferior a 0) */
+    padding: 15px;
+    /* cria um espaçamento interno, para todo o conteúdo dentro do body ficar mais 'afunilado'. */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    /* "flex-direction: row;" transforma o header em uma linha horizontal. */
+    justify-content: space-between;
+    /* deste modo o que foi separado foram as "divs", por isso a criação da div ao invés de somente o elemento de título. */ 
+    align-items: center;
+    /* alinhou os itens do cabeçalho no centro da linha horizontal. */
+}
+
+#title {
+    flex-direction: column;
+    /* para transformar a "div" que possuí o texto 'Marketing Criativo' em coluna. */
+    line-height: 10px;
+    /* A propriedade CSS line-height permite controlar o espaçamento entre as linhas de um texto. Desta maneira deixando o texto 'Marketing Criativo' com pouco espaço entre eles. */ 
+}
+
+li {
+    display: inline-block;
+    /* por padrão possuí a característica "display: block;" que não permite que os elementos se espalhem pela linha. Então mudamos para "display: inline-block;" para os elementos ficarem espalhados de modo horizontal. */
+    margin: 20px;
+    /* para dar uma separada entre cada item da lista. */
+
+    /* a margem foi dada na "li" e não na "ul" pois se não a margem ficaria na caixa, afastando-a do topo e não entre os elementos. */
+}
+
+a {
+    color: white;
+    /* para deixar todos os links com a cor branca */
+}
+
+h1 {
+    font-weight: 200;
+    /* Deixa a fonte do "h1" mais fina.*/
+}
+
+/* Agora precisamos colocar o "aside" e o "article" um ao lado do outro e não abaixo. Para isso: */ 
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    /* "margin-top" para empurrar um pouco o main para baixo. */
+}
+
+h2 {
+    font-size: 56px;
+    line-height: 10px;
+}
+
+.fonte-roxa {
+    color: rgb(132, 13, 201);
+} 
+
+p {
+    line-height: 20px;
+    max-width: 350px;
+    /* deixa a largura máxima do parágrafo de 350px. */
+}
+
+img {
+    width: 530px;
+    margin-left: 230px;
+    /* vai testando qual melhor se adapta para a imagem */
+}
+
+/* agora vamos colocar o efeito ("hover") que ao passar o mouse por cima dos links eles mudem a ponteira e a cor para roxo. */ 
+
+a:hover{
+    color: rgb(132, 13, 201);
+    /* já está funcionando, porém, para deixar a cor aparecendo mais lentamente ao passar o mouse, faremos: */
+    transition: 0.5s all;
+    /* coloca a transição de cor aparecendo dentre de 0.5 segunodos. */
+}
+
+.conta {
+    border: 2px solid rgb(132, 13, 201);
+    padding: 10px;
+    /* o "padding" irá gerar uma margem interna no elemento, deixando a borda roxa mais 'espaçada'. */
+    border-radius: 15px;
+    /* "border-radius" utilizado para arredondar as bordas. */
+}
+
+/* agora criaremos um efeito que ao passar o mouse encima do botão 'Já tem uma conta?' a cor ficará branca e o fundo roxo, para isso: */
+
+.conta:hover{
+    background-color: rgb(132, 13, 201);
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* deixar o formulário no formato de coluna. */
+    width: 70%;
+    /* formulário ficará 70% do tamanho do seu elemento Pai, que no caso é o "Aside". */
+}
+
+input {
+    margin-top: 20px;
+    /* adiciona a margem entre os "inputs". */
+    height: 20px;
+    /* aumenta a altura dos "inputs". */
+    padding: 15px;
+    /* o "padding" irá gerar uma margem interna no elemento, deixando a borda mais 'espaçada'. */
+    border: none;
+    /* remove a borda */
+    border-radius: 20px;
+    /* para arredondar a borda. */
+    font-size: 15px;
+    /* para aumentar um pouco a fonte. */
+}
+
+/* agora falta apenas alterar o botão do formulário, para isso, de maneira semântica, faremos: */
+
+form [type="submit"] {
+    /* desta maneira mexemos apenas no input com type "submit", deste modo que é semânticamente correto. */
+    height: 50px;
+    width: 50%;
+    /* ficará com o tamanho de 50% do seu pai, que no caso é o "form". */
+    background-color: rgb(132, 13, 201);
+    color: white;
+    font-weight: bold;
+    /* força da fonte. */
+}
+
+form [type="submit"]:hover{
+    /* para deixar aquele efeito de mudar a ponteira. */
+    cursor: pointer;
+}
