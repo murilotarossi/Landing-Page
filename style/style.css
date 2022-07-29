@@ -139,3 +139,8 @@ form [type="submit"]:hover{
     /* para deixar aquele efeito de mudar a ponteira. */
     cursor: pointer;
 }
+
+.btn-submit:hover {
+    background-color: rgb(132, 13, 201);
+    color: #fff;
+}
